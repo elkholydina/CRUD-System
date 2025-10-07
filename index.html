@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD SYSTEM</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./bootsrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./icons/all.min.css" />
+    <script defer src="./js/main.js"></script>
+  </head>
+  <body>
+    <div class="container shadow-lg p-4 w-50 h-50 m-auto mt-5 rounded-4 mb-5">
+      <h1 class="text-center mb-4 mt-4">CRUD System</h1>
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="floatingInput1"
+          placeholder="Product Name"
+        />
+        <label for="floatingInput1">Product Name</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="floatingInput2"
+          placeholder="Product Category"
+        />
+        <label for="floatingInput2">Product Category</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="floatingInput3"
+          placeholder="Product Price"
+        />
+        <label for="floatingInput3">Product Price</label>
+      </div>
+      <div class="mb-3">
+        <input class="form-control" type="file" id="formFile" />
+      </div>
+      <div class="form-floating mb-3">
+        <textarea
+          class="form-control"
+          id="floatingInput4"
+          placeholder="Description..."
+        ></textarea>
+        <label for="floatingInput4">Description...</label>
+      </div>
+      <button
+        type="button"
+        class="btn btn-dark"
+        id="add"
+        onclick="mainFunction()"
+      >
+        Add Product
+      </button>
+      <button
+        type="button"
+        class="btn btn-warning d-none w-25"
+        id="save"
+        onclick="editProduct()"
+      >
+        Save
+      </button>
+    </div>
+    <div class="container my-5 mx-auto">
+      <div class="mb-3 w-50 m-auto">
+        <input
+          oninput="search(this.value)"
+          class="form-control"
+          type="search"
+          placeholder="search..."
+        />
+      </div>
+
+      <div class="row g-4" id="products"></div>
+    </div>
+
+    <script src="./bootsrap/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
